@@ -19,7 +19,7 @@ DevRun
 </p>
 
 <p align="center">
-  <a href="#sobre-o-4DEVS">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#sobre-o-devrun">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-Tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#como-usar">Como usar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#como-contribuir">Como contribuir</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -37,7 +37,7 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 [Jest][jest] 🃏 </br>
 [Docker][docker] 🐳 </br>
 [ReactJS][react] 💙 </br>
-[React-bootstrap </br>
+[React-bootstrap[react-bootstrap]</br>
 
 
 ## Como usar ? 🤔
@@ -57,7 +57,7 @@ Abra o terminal como administrador e clone o repositório:
 
 ```bash
 # Clone o repositório
-$ git clone https://github.com/erich/devrun.git
+$ git clone https://github.com/erichmantai/devrun.git
 ```
 
 ## Rodando o frontend da aplicação
