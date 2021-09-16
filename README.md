@@ -37,7 +37,6 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 [Jest][jest] 🃏 </br>
 [Docker][docker] 🐳 </br>
 [ReactJS][react] 💙 </br>
-[React-bootstrap[react-bootstrap]</br>
 
 
 ## Como usar ? 🤔
