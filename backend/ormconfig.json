@@ -1,0 +1,17 @@
+{
+    "type": "postgres",
+    "port": 5432,
+    "host": "localhost",
+    "username": "docker_rundev",
+    "password": "rundev",
+    "database": "devrun",
+    "migrations": [
+        "./src/database/migrations/*.ts"
+    ],
+    "entities": [
+        "./src/modules/developers/entities/*.ts"
+    ],
+    "cli": {
+        "migrationsDir": "./src/database/migrations"
+    }
+}
