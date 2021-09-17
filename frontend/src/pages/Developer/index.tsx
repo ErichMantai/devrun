@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
-import {Table,Button} from 'react-bootstrap'
-import {useHistory} from 'react-router-dom'
+import {Table,Button,Form} from 'react-bootstrap';
+import {useHistory} from 'react-router-dom';
 
 import {api} from '../../services/api';
 import toast, { Toaster } from 'react-hot-toast';
@@ -23,20 +23,15 @@ export function Developer() {
 
     // const [developers, setDevelopers] = useState<IDeveloper[]>([])
     const history = useHistory();
-    const {devs, fetchDevelopers} = useDevelopers(5)
+    const {devs, fetchDevelopers} = useDevelopers(5);
     const { actualPage, setActualPage } = usePagination();
 
     useEffect(() => {
-        if (actualPage !== undefined) {
+
+    if (actualPage !== undefined) {
           fetchDevelopers(actualPage);
         }
-      }, [actualPage, fetchDevelopers]);
-
-    // async function loadDevelopers() {
-    //     const response = await api.get('/developers',{params: {init: page,limit:total}})
-
-    //     setDevelopers(response.data);
-    // }
+      }, [fetchDevelopers]);
 
     function formatDate(date:Date) {
         return moment(date).format("DD/MM/YYYY")
@@ -59,6 +54,10 @@ export function Developer() {
         }
 
         fetchDevelopers(actualPage);
+    }
+
+    function detailDeveloper(id: string){
+        history.push(`/developersById/${id}`)
     }
 
 
@@ -97,6 +96,7 @@ export function Developer() {
                                 <td>
                                     <Button size="sm" onClick={()=> editDeveloper(dev.id)}>Editar</Button>{' '}
                                     <Button size="sm"  variant="danger" onClick={()=>deleteDeveloper(dev.id)}>Remover</Button>{' '}
+                                    <Button size="sm"  variant="info" onClick={()=>detailDeveloper(dev.id)}>Detalhar</Button>{' '}
                                 </td>
                             </tr>
                         ))   

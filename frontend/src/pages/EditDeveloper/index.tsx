@@ -4,8 +4,6 @@ import {Button,Form} from 'react-bootstrap'
 import moment from 'moment';
 import {api} from '../../services/api';
 
-
-
 import './styles.css'
 
 interface IDeveloper {

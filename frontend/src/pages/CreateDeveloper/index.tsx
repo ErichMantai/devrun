@@ -2,6 +2,8 @@ import React, {useState, ChangeEvent} from 'react';
 import {useHistory} from 'react-router-dom'
 import {Button,Form} from 'react-bootstrap'
 
+import toast, { Toaster } from 'react-hot-toast';
+
 import {api} from '../../services/api';
 
 
@@ -17,6 +19,7 @@ interface IDeveloper {
 
 export function CreateDeveloper() {
     const history = useHistory();
+
     const [validated, setValidated] = useState(false);
 
     const [developer, setDeveloper] = useState<IDeveloper>({
@@ -42,19 +45,20 @@ export function CreateDeveloper() {
         if(form.checkValidity() === false){
              e.preventDefault();
              e.stopPropagation(); 
+        } else {
+                         
+            api.post('/developers',developer);
+            
+
+            back()
         }
-
-        setValidated(true);     
-
-        api.post('/developers',developer);
-
-        back()
-
+        setValidated(true);
     }
 
 
     function back() {
         history.push('/developer?page=1')
+        return
     }
 
     return (
@@ -131,6 +135,7 @@ export function CreateDeveloper() {
                         Salvar
                     </Button> 
                 </Form>
+                <Toaster /> 
             </div>    
         </div>
     )

@@ -11,7 +11,7 @@ export function Header() {
                 </Navbar.Brand>
                 <Nav className="me-auto">
                     <Nav.Link href="/developer">Início</Nav.Link>
-                    <Nav.Link href="/developer">Develpers</Nav.Link>
+                    <Nav.Link href="/developer">Developers</Nav.Link>
                 </Nav>
             </Container>
       </Navbar>

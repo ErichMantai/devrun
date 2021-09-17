@@ -10,7 +10,7 @@ interface IDataDeveloper {
   datanascimento: Date
 }
 
-export default function useDevelopers(pageLimit: number) {
+export default function useDevelopers(pageLimit: number, id?:string) {
   const [devs, setDevs] = useState<IDataDeveloper[]>([]);
 
   async function fetchDevelopers(page: number) {
@@ -25,6 +25,6 @@ export default function useDevelopers(pageLimit: number) {
 
   return {
     fetchDevelopers,
-    devs,
+    devs
   };
 }
